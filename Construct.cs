@@ -49,6 +49,12 @@ namespace Constructivity {
             "append", "delete", "create", "person", "human", "magic"
         };
 
+        public static string[] wordsCapital = new string[] {
+            "The", "Of", "And", "Or", "In", "Because", "Nation", "Party",
+            "House", "Blame", "Totally", "Construct", "Word", "Character",
+            "Append", "Delete", "Create", "Person", "Human", "Magic"
+        };
+
         public static void switchOddChars(bool toggle) {
             if (toggle) {
                 consonants = new string[] {
@@ -62,8 +68,34 @@ namespace Constructivity {
         }
 
         public static string NewWordSentence(int sentenceLength, bool usePunctuation = true) {
+            string currentWord = "";
+            string builtString = "";
+            bool addCapital = true;
 
-            return "";
+            for (int i = 0; i < sentenceLength; i++) {
+                Random r = new Random();
+                Random r2 = new Random();
+                if (addCapital) { 
+                    addCapital = false;
+                    currentWord += wordsCapital[r.Next(0, words.Length)];
+                } else {
+                    currentWord += words[r.Next(0, words.Length)];
+                }
+
+                if (r2.Next(0, 6) == 1 && usePunctuation) {
+                    string puncuationToCheck =  punctuation[r.Next(0, punctuation.Length)];
+                    if (puncuationToCheck == "." || puncuationToCheck == ".." || puncuationToCheck == "!" || puncuationToCheck == "?") {
+                        addCapital = true;
+                    }
+                    currentWord += puncuationToCheck;
+                }
+                
+
+                currentWord += ' ';
+                builtString += currentWord;
+            }
+            
+            return builtString;
         }
 
         public static string NewRandomSentence(int sentenceLength, bool oddChars = false, bool usePunctuation = true) {

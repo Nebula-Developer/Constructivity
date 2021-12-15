@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nicocook/Desktop/Constructivity/Constructivity.csproj",
+      "projectUniqueName": "/Users/nicocook/Documents/GitHub/Constructivity/Constructivity.csproj",
       "projectName": "Constructivity",
-      "projectPath": "/Users/nicocook/Desktop/Constructivity/Constructivity.csproj",
+      "projectPath": "/Users/nicocook/Documents/GitHub/Constructivity/Constructivity.csproj",
       "packagesPath": "/Users/nicocook/.nuget/packages/",
-      "outputPath": "/Users/nicocook/Desktop/Constructivity/obj/",
+      "outputPath": "/Users/nicocook/Documents/GitHub/Constructivity/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nicocook/.nuget/NuGet/NuGet.Config"
