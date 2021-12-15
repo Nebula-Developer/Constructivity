@@ -1,0 +1,15 @@
+/Users/nicocook/Desktop/Constructivity/bin/Debug/net5.0/Constructivity.deps.json
+/Users/nicocook/Desktop/Constructivity/bin/Debug/net5.0/Constructivity.runtimeconfig.json
+/Users/nicocook/Desktop/Constructivity/bin/Debug/net5.0/Constructivity.runtimeconfig.dev.json
+/Users/nicocook/Desktop/Constructivity/bin/Debug/net5.0/Constructivity.dll
+/Users/nicocook/Desktop/Constructivity/bin/Debug/net5.0/ref/Constructivity.dll
+/Users/nicocook/Desktop/Constructivity/bin/Debug/net5.0/Constructivity.pdb
+/Users/nicocook/Desktop/Constructivity/obj/Debug/net5.0/Constructivity.csproj.AssemblyReference.cache
+/Users/nicocook/Desktop/Constructivity/obj/Debug/net5.0/Constructivity.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nicocook/Desktop/Constructivity/obj/Debug/net5.0/Constructivity.AssemblyInfoInputs.cache
+/Users/nicocook/Desktop/Constructivity/obj/Debug/net5.0/Constructivity.AssemblyInfo.cs
+/Users/nicocook/Desktop/Constructivity/obj/Debug/net5.0/Constructivity.csproj.CoreCompileInputs.cache
+/Users/nicocook/Desktop/Constructivity/obj/Debug/net5.0/Constructivity.dll
+/Users/nicocook/Desktop/Constructivity/obj/Debug/net5.0/ref/Constructivity.dll
+/Users/nicocook/Desktop/Constructivity/obj/Debug/net5.0/Constructivity.pdb
+/Users/nicocook/Desktop/Constructivity/obj/Debug/net5.0/Constructivity.genruntimeconfig.cache
