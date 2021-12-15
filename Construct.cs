@@ -43,16 +43,8 @@ namespace Constructivity {
             "d", "b", "k", "p"
         };
 
-        public static string[] words = new string[] {
-            "the", "of", "and", "or", "in", "because", "nation", "party",
-            "house", "blame", "totally", "construct", "word", "character",
-            "append", "delete", "create", "person", "human", "magic"
-        };
-
-        public static string[] wordsCapital = new string[] {
-            "The", "Of", "And", "Or", "In", "Because", "Nation", "Party",
-            "House", "Blame", "Totally", "Construct", "Word", "Character",
-            "Append", "Delete", "Create", "Person", "Human", "Magic"
+        public static string[] doubleChar = new string[] {
+            "ll", "pp", "tt"
         };
 
         public static void switchOddChars(bool toggle) {
@@ -67,22 +59,50 @@ namespace Constructivity {
             }
         }
 
-        public static string NewWordSentence(int sentenceLength, bool usePunctuation = true) {
+        public static string NewModernSentence(int sentenceLength, bool usePunctuation = true) {
+            Random r = new Random();
             string currentWord = "";
             string builtString = "";
             bool addCapital = true;
 
             for (int i = 0; i < sentenceLength; i++) {
-                Random r = new Random();
-                Random r2 = new Random();
-                if (addCapital) { 
-                    addCapital = false;
-                    currentWord += wordsCapital[r.Next(0, words.Length)];
+                int wordLength = r.Next(3, 11);
+                currentWord = "";
+
+                if (r.Next(0, 4) == 1) { 
+                    if (addCapital) { 
+                        addCapital = false;
+                        currentWord += consonantStartCapital[r.Next(0, consonantStartCapital.Length)];
+                    } else {
+                        currentWord += consonantStart[r.Next(0, consonantStart.Length)];
+                    }
                 } else {
-                    currentWord += words[r.Next(0, words.Length)];
+                    if (addCapital) { 
+                        addCapital = false;
+                        currentWord += vowelCapital[r.Next(0, vowelCapital.Length)];
+                    } else {
+                        currentWord += vowel[r.Next(0, vowel.Length)];
+                    }
                 }
 
-                if (r2.Next(0, 6) == 1 && usePunctuation) {
+                if (r.Next(0,10) == 5) {
+                    currentWord += doubleChar[r.Next(0, doubleChar.Length)];
+                    currentWord += vowel[r.Next(0, vowel.Length)];
+                    currentWord += midConsonant[r.Next(0, midConsonant.Length)];
+                    currentWord += endConsonant[r.Next(0, endConsonant.Length)];
+                } else { 
+                    currentWord += endConsonant[r.Next(0, endConsonant.Length)];
+                    currentWord += vowel[r.Next(0, vowel.Length)];
+                    if (r.Next(0, 4) == 1) {
+                        currentWord += midConsonant[r.Next(0, midConsonant.Length)];
+                        currentWord += vowel[r.Next(0, vowel.Length)];
+                        currentWord += endConsonant[r.Next(0, endConsonant.Length)];
+                    } else {
+                        currentWord += endConsonant[r.Next(0, endConsonant.Length)];
+                    }
+                }
+
+                if (r.Next(0, 5) == 3) {
                     string puncuationToCheck =  punctuation[r.Next(0, punctuation.Length)];
                     if (puncuationToCheck == "." || puncuationToCheck == ".." || puncuationToCheck == "!" || puncuationToCheck == "?") {
                         addCapital = true;
@@ -90,7 +110,6 @@ namespace Constructivity {
                     currentWord += puncuationToCheck;
                 }
                 
-
                 currentWord += ' ';
                 builtString += currentWord;
             }
@@ -244,6 +263,11 @@ namespace Constructivity {
                 builtString += ")";
             }
             return builtString;
+        }
+
+        public static string Ran(string[] stringsToChooseFrom) {
+            Random rand = new Random();
+            return stringsToChooseFrom[rand.Next(0, stringsToChooseFrom.Length)];
         }
     }
 }
