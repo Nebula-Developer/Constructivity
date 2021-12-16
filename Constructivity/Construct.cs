@@ -63,6 +63,17 @@ namespace Constructivity {
             "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
         };
 
+        public static string SingleCharLength(int sentenceLength) {
+            string builtString = "";
+            for (int i = 0; i < sentenceLength; i++) {
+                for (int b = 0; b < new Random().Next(3, 14); b++) {
+                    builtString += '*';
+                }
+                builtString += ' ';
+            }
+            return builtString;
+        }
+
         public static string RandomChars(int sentenceLength) {
             string builtString = "";
             for (int i = 0; i < sentenceLength; i++) {

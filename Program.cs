@@ -7,14 +7,12 @@ namespace Constructivity.Demo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Nebula Constructivity Demo.\n");
-            Console.ReadKey();
-
             while (true) {
                 Console.Clear();
                 Console.WriteLine("[0]. Random Sentence");
                 Console.WriteLine("[1]. Modern Sentence");
                 Console.WriteLine("[2]. Random Chars");
+                Console.WriteLine("[3]. Single Char Sentence (Debugging Length)");
                 int.TryParse(Console.ReadLine(), out int a);
 
                 Console.Clear();
@@ -36,6 +34,12 @@ namespace Constructivity.Demo
                         output = Construct.RandomChars(Question.Int("Sentence Length?"));
                         break;
 
+                    case 3:
+                    // ----> Single Chars:
+                        output = Construct.SingleCharLength(Question.Int("Sentence Length?"));
+                        break;
+
+                    // ----> Otherrwise:
                     default:
                         Console.WriteLine("Please spesify a sentence type.");
                         continue;
